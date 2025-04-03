@@ -1,0 +1,150 @@
+/* General styling for the container */
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Form styling */
+form {
+    /* display: flex; */
+    flex-direction: column;
+}
+
+form input, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="text"], form input[type="password"] {
+    font-size: 16px;
+}
+
+form button {
+    background-color: rgb(10, 13, 201);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(10, 13, 201);
+}
+
+/* Link styling */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Flash messages styling */
+.flash-messages {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flash-messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-messages .error {
+    background-color: #f44336;
+    color: white;
+}
+
+.flash-messages .success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.flash-messages .info {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Input Fields - Focus styling */
+form input:focus, form button:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Navigation bar */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* Centering content */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #e9ecef; */
+    background-image: url("https://wallpaperaccess.com/full/4321869.jpg");
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Background image for pages */
+body {
+    /* background-image: url('path-to-your-image.jpg'); */
+    border-color: #2196F3;
+    background-size: cover;
+    background-position: center;
+}
+
+button{
+    margin-left: 98px;
+    width: 50%;
+    /* background-color: rgb(10, 13, 201); */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the container */
+}
+
+/* Additional spacing for larger screens */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
