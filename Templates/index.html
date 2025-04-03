@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    </head>
+    <body>
+        <div class="bg">
+            <nav class="nav">
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+        <br>
+        <div class="container">
+        <h2>Welcome to Hiring Prediction</h2>
+        
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <!-- <nav>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+        </nav> -->
+
+
+        {% if prediction %}
+            <h2>{{ prediction }}</h2>
+        {% endif %}
+        <div class="ss">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>SSLC Percentage:</label>
+            <input type="text" name="sslc Score" placeholder="Enter your marks" required><br><br>
+            <label>PU Percentage:</label>
+            <input type="text" name="pu Score" placeholder="Enter your marks" required><br><br>
+            <label>UG CGPA:</label>
+            <input type="text" name="ug Score" placeholder="Enter your marks" required><br><br>
+            <label>Quants Score:</label>
+            <input type="text" name="quants Score" placeholder="Enter your marks" required><br><br>
+            <label>Logical:</label>
+            <input type="text" name="logical Score" placeholder="Enter your marks" required><br><br>
+            <label>Verbal:</label>
+            <input type="text" name="verbal Score" placeholder="Enter your marks" required><br><br>
+            <label>Programming:</label>
+            <input type="text" name="programming " placeholder="Enter your marks" required><br>
+            <label>Communication:</label>
+            <input type="text" name="communication" placeholder="Enter your marks" required><br>
+            <label>Experience(yr):</label>
+            <input type="text" name="experience" placeholder="Enter your marks" required><br>
+
+            <button type="submit">Predict</button>
+        </form></div>
+
+    </div></div>
+</body>
+</html>
