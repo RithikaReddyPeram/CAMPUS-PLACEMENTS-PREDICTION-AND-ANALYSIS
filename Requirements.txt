@@ -1,0 +1,7 @@
+Flask 
+bcrypt 
+joblib  
+sqlite3
+pandas  
+numpy
+scikit-learn  
